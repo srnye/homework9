@@ -35,6 +35,11 @@ if (process.argv.length <= 2)
 	usageState();
 	process.exit(-1);
 }
+else if (process.argv[2] == "--help")
+{
+	helpFun();
+	process.exit(-1);
+}
 else if (process.argv.length != 10)
 {
 	console.log("Incorrect number of arguments, exiting...");
