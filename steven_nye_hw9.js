@@ -27,3 +27,35 @@ function helpFun()
 	console.log("-u Specifies user's username on the customer directory (icarus server)");
 	console.log("With no arguments, it provides a usage statement");
 }
+
+//check args
+if (process.argv.length <= 2)
+{
+	usageState();
+	process.exit(-1);
+}
+else if (process.argv.length > 8)
+{
+	usageState();
+	process.exit(-1);
+}
+else if (process.argv[2] != "-c")
+{
+	usageState();
+	process.exit(-1);
+}
+else if (process.argv[4] != "-f")
+{
+	usageState();
+	process.exit(-1);
+}
+else if (process.argv[6] != "-u")
+{
+	usageState();
+	process.exit(-1);
+}
+
+
+console.log(process.argv[2]);
+console.log(process.argv[3]);
+console.log(process.argv[4]);
